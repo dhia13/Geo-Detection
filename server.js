@@ -1,4 +1,4 @@
-
+require('dotenv').config(); // Load environment variables from .env
 
 const maxmind = require('maxmind');
 const path = require('path');
@@ -43,9 +43,10 @@ async function startServer() {
     try {
         await initGeoDB();
         console.log('🌍 GeoLite2 database initialized');
-        app.listen(process.env.PORT, () => {
+        const port = process.env.PORT || 4002; // Default to 3000 if PORT is not set
+        app.listen(port, () => {
             console.log(
-                `Express server running on port ${process.env.PORT} in ${app.get('env')} mode`
+                `Express server running on port ${port} in ${app.get('env')} mode`
             );
         });
         scheduleGeoDBUpdate();
