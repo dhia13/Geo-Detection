@@ -1,7 +1,7 @@
 module.exports = {
     apps: [
         {
-            name: 'backend',
+            name: 'geo-detection-service',
             script: './server.js',  // Adjust this path to your main server file
             cwd: './',
             instances: 1,
