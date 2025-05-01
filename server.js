@@ -37,7 +37,7 @@ function getCountryByIP(req, res) {
     }
 }
 
-app.use('/api', getCountryByIP);
+app.get('/api/geo', getCountryByIP);
 
 async function startServer() {
     try {
