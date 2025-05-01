@@ -1,0 +1,23 @@
+{
+  "name": "Ip-detection",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon",
+    "update-db": "node utils/download-geolite2.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "maxmind": "^4.3.24",
+    "node-cron": "^3.0.3",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.10",
+    "tar": "^7.4.3",
+    "uuid": "^11.1.0"
+  }
+}
