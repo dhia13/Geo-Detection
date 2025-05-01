@@ -31,6 +31,7 @@ function getCountryByIP(req, res) {
     try {
         const geo = lookup.get(ip);
         const country = geo?.country?.iso_code || 'Unknown';
+        console.log({ ip, country })
         res.json({ ip, country });
     } catch (err) {
         res.status(500).json({ error: 'Lookup failed', detail: err.message });
